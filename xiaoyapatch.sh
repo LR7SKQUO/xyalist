@@ -5,7 +5,7 @@ sed_string_escape() {
     echo $searchEscaped
 }
 
-sed -i 's/dl-cdn.alpinelinux.org/mirrors.aliyun.com/g' /etc/apk/repositories
+#sed -i 's/dl-cdn.alpinelinux.org/mirrors.aliyun.com/g' /etc/apk/repositories
 apk add --no-cache zip
 
 rm -rf /var/lib/aaa
@@ -22,8 +22,8 @@ cd /var/lib/aaa
 zip -q -r html.zip *
 mv html.zip /var/lib/data.zip
 
-chown -R nginx /var/cache/nginx/
-chmod -R 777 /var/cache/nginx/
+#chown -R nginx /var/cache/nginx/
+#chmod -R 777 /var/cache/nginx/
 
 cd /
 rm -rf /var/lib/aaa
