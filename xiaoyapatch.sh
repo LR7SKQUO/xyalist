@@ -53,6 +53,8 @@ sedSearch=$(sed_string_escape 'proxy_cache_key $proxy_host$uri;')
 sed -i "s/$sedSearch//g" /var/lib/aaa/emby_ext.conf
 sedSearch=$(sed_string_escape 'add_header X-Cache-Status $upstream_cache_status;')
 sed -i "s/$sedSearch//g" /var/lib/aaa/emby_ext.conf
+sedSearch=$(sed_string_escape 'proxy_cache emby;')
+sed -i "s/$sedSearch//g" /var/lib/aaa/emby_ext.conf
 
 cd /var/lib/aaa
 zip -q -r html.zip *
